@@ -1,0 +1,5 @@
+Episode,Level,Solver,Rows,Cols,Blocked,T_POINTS,First,P_ONE_K,T_ONE_K,P_TWO_K,T_TWO_K,P_FIVE_K,T_FIVE_K,P_DIAMOND,T_DIAMOND,GoodiesTask,Horizontal,Vertical,Diagonal,DyP,DyT,AP,GP,T_LINES
+1,1,RANDOM,1,1,0,10,THEY,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+1,2,RANDOM,1,1,0,10,THEY,1,1,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+1,3,RANDOM,1,2,0,20,ME,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+1,4,RANDOM,4,5,3,20,ME,-,-,2,1,1,1,2,3,-,-,-,-,-,-,-,-,2

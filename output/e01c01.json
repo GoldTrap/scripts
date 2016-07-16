@@ -1,0 +1,15 @@
+{
+  "solver": "RANDOM",
+  "rows": 1,
+  "cols": 1,
+  "blocked": 0,
+  "tasks": [
+    {
+      "taskType": "POINTS",
+      "count": 0,
+      "points": 10
+    }
+  ],
+  "goodies": [],
+  "firstPlayer": "THEY"
+}

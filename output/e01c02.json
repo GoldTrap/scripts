@@ -1,0 +1,25 @@
+{
+  "solver": "RANDOM",
+  "rows": 1,
+  "cols": 1,
+  "blocked": 0,
+  "tasks": [
+    {
+      "taskType": "POINTS",
+      "count": 0,
+      "points": 10
+    },
+    {
+      "taskType": "ONE_K",
+      "count": 1,
+      "points": 0
+    }
+  ],
+  "goodies": [
+    {
+      "type": "ONE_K",
+      "count": 1
+    }
+  ],
+  "firstPlayer": "THEY"
+}
