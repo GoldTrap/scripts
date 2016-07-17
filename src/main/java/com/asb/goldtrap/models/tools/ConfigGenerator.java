@@ -34,14 +34,18 @@ public class ConfigGenerator {
         final File dir = getOutputDirectory();
         parseRecords()
                 .stream()
+                .parallel()
                 .map(this::transform)
                 .forEach(level -> {
-                    File file = new File(dir, level.getLevelCode() + ".json");
+                    String fileName = level.getLevelCode() + ".json";
+                    System.out.println("Generating File: " + fileName);
+
                     Gson gson = new GsonBuilder()
                             .excludeFieldsWithoutExposeAnnotation()
                             .create();
                     try (JsonWriter jsonWriter = gson.newJsonWriter(
-                            new BufferedWriter(new FileWriter(file)))) {
+                            new BufferedWriter(
+                                    new FileWriter(new File(dir, fileName))))) {
                         jsonWriter.setIndent("  ");
                         gson.toJson(level, Level.class, jsonWriter);
                     } catch (IOException e) {
@@ -182,7 +186,7 @@ public class ConfigGenerator {
             valid = StringUtils.isNotEmpty(item) && !StringUtils.equals(item,
                     "-");
         } catch (IllegalArgumentException iae) {
-            System.err.println("Illegal record " + key);
+            // System.err.println("Illegal record " + key);
         }
         return valid;
     }
