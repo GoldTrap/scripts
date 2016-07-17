@@ -1,34 +1,18 @@
 package com.asb.goldtrap.models.eo;
 
+import com.google.gson.annotations.Expose;
+import lombok.Builder;
+import lombok.Data;
+
 /**
  * Created by arjun on 26/10/15.
  */
+@Data
+@Builder
 public class Complication {
+    @Expose
     private String operator;
+    @Expose
     private StrategyData strategy;
-
-    public Complication() {
-    }
-
-    public Complication(String operator, StrategyData strategy) {
-        this.operator = operator;
-        this.strategy = strategy;
-    }
-
-    public String getOperator() {
-        return operator;
-    }
-
-    public void setOperator(String operator) {
-        this.operator = operator;
-    }
-
-    public StrategyData getStrategy() {
-        return strategy;
-    }
-
-    public void setStrategy(StrategyData strategy) {
-        this.strategy = strategy;
-    }
 }
 

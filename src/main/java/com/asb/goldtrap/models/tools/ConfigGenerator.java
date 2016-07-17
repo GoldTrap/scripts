@@ -2,6 +2,7 @@ package com.asb.goldtrap.models.tools;
 
 import com.asb.goldtrap.models.eo.*;
 import com.asb.goldtrap.models.states.enums.GoodiesState;
+import com.google.common.collect.ImmutableList;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
@@ -82,7 +83,43 @@ public class ConfigGenerator {
                 .tasks(getTasks(record))
                 .goodies(getGoodies(record))
                 .dynamicGoodies(getDynamicGoodies(record))
+                .complications(getComplications(record))
                 .build();
+    }
+
+    private List<Complication> getComplications(CSVRecord record) {
+        return ImmutableList.<Complication>builder()
+                .addAll(getPositionComplication(record))
+                .addAll(getValueComplicationForDynamicGoodies(record))
+                .build();
+    }
+
+    private List<Complication> getValueComplicationForDynamicGoodies(
+            CSVRecord record) {
+        return Arrays.asList("AP", "GP")
+                .stream()
+                .filter(c -> isValidRecordItem(record, c))
+                .map(c -> Complication.builder()
+                        .operator("DYNAMIC_GOODIE_VALUE_MODIFIER")
+                        .strategy(StrategyData.builder()
+                                .type(c)
+                                .value(Integer.valueOf(record.get(c)))
+                                .build())
+                        .build())
+                .collect(Collectors.toList());
+    }
+
+    private List<Complication> getPositionComplication(CSVRecord record) {
+        return Arrays.asList("VERTICAL", "HORIZONTAL", "DIAGONAL")
+                .stream()
+                .filter(c -> isValidRecordItem(record, c))
+                .map(c -> Complication.builder()
+                        .operator("GOODIE_POSITION_MODIFIER")
+                        .strategy(StrategyData.builder()
+                                .type(c)
+                                .build())
+                        .build())
+                .collect(Collectors.toList());
     }
 
     private List<DynamicGoodieData> getDynamicGoodies(CSVRecord record) {
