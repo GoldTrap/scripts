@@ -10,6 +10,7 @@ import com.google.gson.stream.JsonWriter;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVRecord;
 import org.apache.commons.lang3.StringUtils;
+import org.json.JSONObject;
 
 import java.io.*;
 import java.lang.reflect.Type;
@@ -160,9 +161,17 @@ public class ConfigGenerator {
             tasksBuilder.points(Integer.valueOf(
                     record.get("T_" + taskType.name())));
         } else {
-            tasksBuilder.count(Integer.valueOf(
-                    record.get("T_" + taskType.name())));
+            if (TaskType.DYNAMIC_GOODIE == taskType) {
+                JSONObject json = new JSONObject(
+                        record.get("T_" + taskType.name()));
+                tasksBuilder.count(json.getInt("count"));
+                tasksBuilder.points(json.getInt("points"));
+            } else {
+                tasksBuilder.count(Integer.valueOf(
+                        record.get("T_" + taskType.name())));
+            }
         }
+
         return tasksBuilder.build();
     }
 

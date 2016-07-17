@@ -1,7 +1,7 @@
-Episode,Level,Solver,Rows,Cols,Blocked,T_POINTS,First,P_ONE_K,T_ONE_K,P_TWO_K,T_TWO_K,P_FIVE_K,T_FIVE_K,P_DIAMOND,T_DIAMOND,T_GOODIES,HORIZONTAL,VERTICAL,DIAGONAL,DyP,T_DYNAMIC_GOODIE,AP,GP,T_LINES
-1,1,RANDOM,1,1,0,10,THEY,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-1,2,RANDOM,1,1,0,10,THEY,1,1,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-1,3,RANDOM,1,2,0,20,ME,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-1,4,RANDOM,4,5,3,110,ME,-,-,2,1,1,1,3,1,1,-,-,-,-,-,-,-,2
-1,5,RANDOM,4,5,3,110,ME,-,-,2,1,1,1,3,2,2,-,-,-,"[{value:15, count:2},{value:25,count:1}]",2,-,-,2
-4,6,RANDOM,5,5,3,130,ME,2,1,3,1,1,1,3,3,3,1,-,-,"[{value:15, count:2},{value:25,count:1}]",2,2,-,2
+Episode,Level,Solver,Rows,Cols,Blocked,T_POINTS,First,P_ONE_K,T_ONE_K,P_TWO_K,T_TWO_K,P_FIVE_K,T_FIVE_K,P_DIAMOND,T_DIAMOND,T_GOODIES,HORIZONTAL,VERTICAL,DIAGONAL,DyP,T_DYNAMIC_GOODIE,AP,GP,T_LINES,T_HORIZONTAL_LINE,T_VERTICAL_LINE
+1,1,RANDOM,1,1,0,10,THEY,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+1,2,RANDOM,1,1,0,10,THEY,1,1,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+1,3,RANDOM,1,2,0,20,ME,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+1,4,RANDOM,4,5,3,110,ME,-,-,2,1,1,1,3,1,1,-,-,-,-,-,-,-,2,-,-
+1,5,RANDOM,4,5,3,110,ME,-,-,2,1,1,1,3,2,2,-,-,-,"[{value:15, count:2},{value:25,count:1}]","{count:2, points:20}",-,-,2,-,-
+4,6,RANDOM,5,5,3,130,ME,2,1,3,1,1,1,3,3,3,1,-,-,"[{value:15, count:2},{value:25,count:1}]","{count:2, points:20}",2,-,2,-,-
