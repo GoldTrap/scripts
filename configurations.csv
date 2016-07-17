@@ -1,7 +1,25 @@
 Episode,Level,Solver,Rows,Cols,Blocked,T_POINTS,First,P_ONE_K,T_ONE_K,P_TWO_K,T_TWO_K,P_FIVE_K,T_FIVE_K,P_DIAMOND,T_DIAMOND,T_GOODIES,HORIZONTAL,VERTICAL,DIAGONAL,DyP,T_DYNAMIC_GOODIE,AP,GP,T_LINES,T_HORIZONTAL_LINE,T_VERTICAL_LINE
 1,1,RANDOM,1,1,0,10,THEY,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
 1,2,RANDOM,1,1,0,10,THEY,1,1,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-1,3,RANDOM,1,2,0,20,ME,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-1,4,RANDOM,4,5,3,110,ME,-,-,2,1,1,1,3,1,1,-,-,-,-,-,-,-,2,-,-
-1,5,RANDOM,4,5,3,110,ME,-,-,2,1,1,1,3,2,2,-,-,-,"[{value:15, count:2},{value:25,count:1}]","{count:2, points:20}",-,-,2,-,-
-4,6,RANDOM,5,5,3,130,ME,2,1,3,1,1,1,3,3,3,1,-,-,"[{value:15, count:2},{value:25,count:1}]","{count:2, points:20}",2,-,2,-,-
+1,3,RANDOM,1,2,0,20,ANY,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+1,4,RANDOM,3,1,0,20,ME,-,-,-,-,-,-,-,-,-,-,-,-,"[{value:15, count:1}]","{count:1, points:15}",-,-,-,-,-
+1,5,RANDOM,2,2,0,30,ANY,1,1,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+1,6,RANDOM,2,3,0,40,ANY,2,1,-,-,-,-,-,-,-,-,-,-,"[{value:8, count:1}]","{count:1, points:8}",-,-,-,-,-
+1,7,RANDOM,3,2,0,40,THEY,2,2,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+1,8,RANDOM,1,4,0,30,ME,-,-,-,-,-,-,-,-,-,-,-,-,"[{value:15, count:1}]","{count:1, points:15}",-,-,-,-,-
+1,9,RANDOM,3,3,0,50,ANY,3,2,-,-,-,-,-,-,-,-,-,-,"[{value:5, count:1}, {value:15, count:1}]","{count:1, points:5}",-,-,-,-,-
+1,10,RANDOM_GREEDY,3,2,0,40,ANY,2,1,-,-,-,-,-,-,-,-,-,-,"[{value:5, count:1}, {value:15, count:1}]","{count:1, points:5}",-,-,-,-,-
+1,11,RANDOM_GREEDY,2,3,0,40,ANY,2,2,-,-,-,-,-,-,-,-,-,-,"[{value:15, count:1}]","{count:1, points:5}",-,-,-,-,-
+1,12,RANDOM_GREEDY,3,3,0,50,ANY,3,3,-,-,-,-,-,-,-,-,-,-,"[{value:5, count:1}, {value:15, count:1}]","{count:1, points:15}",-,-,-,-,-
+2,1,RANDOM,2,1,0,20,THEY,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2,2,RANDOM,2,1,0,20,THEY,1,1,1,1,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2,3,RANDOM,2,2,0,30,ANY,-,-,2,1,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2,4,RANDOM,3,2,0,40,ME,-,-,2,2,-,-,-,-,-,-,-,-,"[{value:10, count:1}]","{count:1, points:10}",-,-,-,-,-
+2,5,RANDOM,2,3,0,40,ANY,1,1,1,1,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2,6,RANDOM,2,4,0,50,ANY,2,1,2,1,-,-,-,-,-,-,-,-,"[{value:8, count:1}]","{count:1, points:8}",-,-,-,-,-
+2,7,RANDOM,4,2,0,50,THEY,1,1,2,2,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2,8,RANDOM,2,4,0,50,ME,-,-,1,1,-,-,-,-,-,-,-,-,"[{value:25, count:1}]","{count:1, points:25}",-,-,-,-,-
+2,9,RANDOM,4,3,0,70,ANY,1,1,3,2,-,-,-,-,-,-,-,-,"[{value:15, count:1}, {value:20, count:1}]","{count:1, points:15}",-,-,-,-,-
+2,10,RANDOM_GREEDY,3,3,0,50,ANY,2,1,2,1,-,-,-,-,-,-,-,-,"[{value:15, count:2}]","{count:1, points:10}",-,-,-,-,-
+2,11,RANDOM_GREEDY,2,4,0,50,ANY,2,1,2,1,-,-,-,-,-,-,-,-,"[{value:15, count:1}]","{count:1, points:15}",-,-,-,-,-
+2,12,RANDOM_GREEDY,3,4,0,70,ANY,2,2,3,2,-,-,-,-,-,-,-,-,"[{value:8, count:1}, {value:12, count:1}]","{count:1, points:12}",-,-,-,-,-
