@@ -1,30 +1,17 @@
 package com.asb.goldtrap.models.eo;
 
+import com.google.gson.annotations.Expose;
+import lombok.Builder;
+import lombok.Data;
+
 /**
  * Created by arjun on 25/10/15.
  */
+@Data
+@Builder
 public class DynamicGoodieData {
+    @Expose
     private int value;
+    @Expose
     private int count;
-
-    public DynamicGoodieData(int value, int count) {
-        this.value = value;
-        this.count = count;
-    }
-
-    public int getValue() {
-        return value;
-    }
-
-    public void setValue(int value) {
-        this.value = value;
-    }
-
-    public int getCount() {
-        return count;
-    }
-
-    public void setCount(int count) {
-        this.count = count;
-    }
 }

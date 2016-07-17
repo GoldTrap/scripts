@@ -4,13 +4,16 @@ import com.asb.goldtrap.models.eo.*;
 import com.asb.goldtrap.models.states.enums.GoodiesState;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.reflect.TypeToken;
 import com.google.gson.stream.JsonWriter;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVRecord;
 import org.apache.commons.lang3.StringUtils;
 
 import java.io.*;
+import java.lang.reflect.Type;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
 import java.util.stream.Collectors;
@@ -20,6 +23,10 @@ import java.util.stream.Collectors;
  * Created by arjun on 16/07/16.
  */
 public class ConfigGenerator {
+
+    private Gson dynamicGsonParser = new GsonBuilder().create();
+    private Type dynamicGoodieType = new TypeToken<List<DynamicGoodieData>>() {
+    }.getType();
 
     public void generateConfigs() {
         final File dir = getOutputDirectory();
@@ -74,7 +81,17 @@ public class ConfigGenerator {
                 .firstPlayer(PlayerType.valueOf(record.get("First")))
                 .tasks(getTasks(record))
                 .goodies(getGoodies(record))
+                .dynamicGoodies(getDynamicGoodies(record))
                 .build();
+    }
+
+    private List<DynamicGoodieData> getDynamicGoodies(CSVRecord record) {
+        List<DynamicGoodieData> goodieData = null;
+        if (isValidRecordItem(record, "DyP")) {
+            goodieData = dynamicGsonParser.fromJson(record.get("DyP"),
+                    dynamicGoodieType);
+        }
+        return (null == goodieData) ? Collections.emptyList() : goodieData;
     }
 
     private List<GoodieData> getGoodies(CSVRecord record) {
