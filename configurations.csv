@@ -59,3 +59,15 @@ Episode,Level,Solver,Rows,Cols,Blocked,T_POINTS,First,P_ONE_K,T_ONE_K,P_TWO_K,T_
 5,10,BASIC_GREEDY,5,4,0,110,ANY,1,1,1,1,2,1,-,-,-,-,-,-,"[{value:150, count:1}, {value:200, count:1}]","{count:1, points:15}",-5,-,-,-,-
 5,11,RANDOM_GREEDY,4,5,1,110,ANY,1,1,1,-,2,1,1,1,-,-,-,1,"[{value:100, count:1}]","{count:1, points:15}",-1,-,,-,2
 5,12,BASIC_GREEDY,5,5,1,130,ANY,1,1,1,1,3,2,1,1,-,-,-,1,"[{value:8, count:1}, {value:100, count:1}]","{count:1, points:12}",-2,-,-,2,-
+6,1,RANDOM,3,4,0,70,THEY,1,-,1,-,1,1,1,1,-,-,-,-,-,-,-,-,-,-,-
+6,2,RANDOM,3,4,1,70,THEY,1,-,1,1,1,1,1,1,-,-,1,-,-,-,-,-,-,-,-
+6,3,RANDOM,3,5,1,80,ANY,1,-,1,-,2,1,1,-,-,-,-,-,-,-,-,-,-,-,-
+6,4,RANDOM_GREEDY,4,5,0,110,ME,1,-,1,-,2,2,1,-,-,-,-,-,"[{value:12, count:1}]","{count:1, points:12}",2,-,-,-,-
+6,5,RANDOM_GREEDY,3,6,1,100,ANY,1,-,1,-,1,1,2,1,-,-,-,-,-,-,-,-,-,-,-
+6,6,RANDOM_GREEDY,3,7,0,110,ANY,1,-,2,1,2,1,2,1,-,-,1,-,"[{value:10, count:1}]","{count:1, points:10}",2,-,1,-,-
+6,7,RANDOM_GREEDY,7,4,2,150,THEY,1,-,1,-,2,2,1,1,-,-,-,,-,-,-,-,-,1,-
+6,8,BASIC_GREEDY,5,5,2,130,ME,1,-,1,-,1,1,1,-,-,-,-,,"[{value:20, count:1}]","{count:1, points:20}",-,-,-,-,1
+6,9,RANDOM_GREEDY,7,4,1,150,ANY,1,-,1,-,3,2,1,1,-,1,-,-,"[{value:18, count:1}, {value:20, count:1}]","{count:1, points:18}",2,-,-,-,-
+6,10,BASIC_GREEDY,6,4,0,130,ANY,1,1,1,1,2,1,1,-,-,-,-,-,"[{value:150, count:1}, {value:200, count:1}]","{count:1, points:15}",-4,-,-,-,-
+6,11,RANDOM_GREEDY,5,5,1,130,ANY,1,1,1,-,2,1,1,1,-,-,-,1,"[{value:100, count:1}]","{count:1, points:15}",-1,-,,-,2
+6,12,BASIC_GREEDY,6,5,1,160,ANY,1,1,1,1,3,2,1,1,-,-,-,1,"[{value:8, count:1}, {value:100, count:1}]","{count:1, points:12}",-2,-,-,2,-
