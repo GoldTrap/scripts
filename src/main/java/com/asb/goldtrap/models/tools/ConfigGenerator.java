@@ -14,6 +14,8 @@ import org.json.JSONObject;
 
 import java.io.*;
 import java.lang.reflect.Type;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -38,7 +40,11 @@ public class ConfigGenerator {
                 .map(this::transform)
                 .forEach(level -> {
                     String fileName = level.getLevelCode() + ".json";
-                    System.out.println("Generating File: " + fileName);
+                    System.out.println("Generating File: " + fileName + " at " +
+                            LocalDateTime.now()
+                                    .format(DateTimeFormatter.ISO_TIME) + " " +
+                            "in the thread " + Thread.currentThread()
+                            .getName());
 
                     Gson gson = new GsonBuilder()
                             .excludeFieldsWithoutExposeAnnotation()
@@ -51,6 +57,11 @@ public class ConfigGenerator {
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
+                    System.out.println("Generated File: " + fileName + " at " +
+                            LocalDateTime.now()
+                                    .format(DateTimeFormatter.ISO_TIME) + " " +
+                            "in the thread " + Thread.currentThread()
+                            .getName());
                 });
     }
 
